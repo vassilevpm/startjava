@@ -24,8 +24,8 @@ public class VariablesTheme {
         int priceGoodsY = 200;
         double discount = 0.11;
         System.out.println("Сумма скидки: " + (priceGoodsX + priceGoodsY) * discount + " руб.");
-        System.out.println("Общая стоимость товаров со скидкой: " + (priceGoodsX + priceGoodsY) * 
-            (1 - discount) + " руб." + "\n");
+        System.out.println("Общая стоимость товаров со скидкой: " + 
+                (priceGoodsX + priceGoodsY) * (1 - discount) + " руб." + "\n");
         
         System.out.println("3. Вывод на консоль слова JAVA" + "\n");
         System.out.println("   J    a  v     v  a   ");
@@ -42,18 +42,18 @@ public class VariablesTheme {
         System.out.println("первоначальное значение short: " + shortNumber);
         System.out.println("первоначальное значение int: " + intNumber);
         System.out.println("первоначальное значение long: " + longNumber + "\n");
-        byteNumber ++;
-        shortNumber ++;
-        intNumber ++;
-        longNumber ++;
+        byteNumber++;
+        shortNumber++;
+        intNumber++;
+        longNumber++;
         System.out.println("значение после инкремента byte: " + byteNumber);
         System.out.println("значение после инкремента short: " + shortNumber);
         System.out.println("значение после инкремента int: " + intNumber);
         System.out.println("значение после инкремента long: " + longNumber + "\n");
-        byteNumber --;
-        shortNumber --;
-        intNumber --;
-        longNumber --;
+        byteNumber--;
+        shortNumber--;
+        intNumber--;
+        longNumber--;
         System.out.println("значение после декремента byte: " + byteNumber);
         System.out.println("значение после декремента short: " + shortNumber);
         System.out.println("значение после декремента int: " + intNumber);
@@ -104,10 +104,10 @@ public class VariablesTheme {
         int firstDigit = srcNum / 100;
         int secondDigit = (srcNum / 10) % 10;
         int thirdDigit = srcNum % 10;
-        System.out.println("Сумма цифр числа " + srcNum + " = " + (firstDigit + secondDigit + 
-            thirdDigit));
-        System.out.println("Произведение цифр числа " + srcNum + " = " + (firstDigit * 
-            secondDigit * thirdDigit) + "\n");
+        System.out.println("Сумма цифр числа " + srcNum + " = " + 
+                (firstDigit + secondDigit + thirdDigit));
+        System.out.println("Произведение цифр числа " + srcNum + " = " + 
+                (firstDigit * secondDigit * thirdDigit) + "\n");
 
         System.out.println("8. Вывод на консоль ASCII-арт Дюка" +"\n");
         char rb = '\u0029';

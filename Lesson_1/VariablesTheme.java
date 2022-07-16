@@ -1,7 +1,6 @@
 public class VariablesTheme {
 
     public static void main(String[] args) {
-
         System.out.println("1. Создание переменных и вывод их значений на консоль" + "\n");
         byte qoresQuantity = 4;
         short cpuFrequency = 2000;
@@ -21,11 +20,12 @@ public class VariablesTheme {
         System.out.println("Старый ноут ? Sad but " + isOld + "\n");
 
         System.out.println("2. Расчет стоимости товара со скидкой" + "\n");
-        int firstItemPrice = 100;
-        int secondItemPrice = 200;
+        int priceGoodsX = 100;
+        int priceGoodsY = 200;
         double discount = 0.11;
-        System.out.println("Сумма скидки: " + (firstItemPrice + secondItemPrice) * discount + " руб.");
-        System.out.println("Общая стоимость товаров со скидкой: " + (firstItemPrice + secondItemPrice) * (1 - discount) + " руб." + "\n");
+        System.out.println("Сумма скидки: " + (priceGoodsX + priceGoodsY) * discount + " руб.");
+        System.out.println("Общая стоимость товаров со скидкой: " + (priceGoodsX + priceGoodsY) * 
+            (1 - discount) + " руб." + "\n");
         
         System.out.println("3. Вывод на консоль слова JAVA" + "\n");
         System.out.println("   J    a  v     v  a   ");
@@ -42,18 +42,18 @@ public class VariablesTheme {
         System.out.println("первоначальное значение short: " + shortNumber);
         System.out.println("первоначальное значение int: " + intNumber);
         System.out.println("первоначальное значение long: " + longNumber + "\n");
-        byteNumber += 1;
-        shortNumber += 1;
-        intNumber += 1;
-        longNumber += 1;
+        byteNumber ++;
+        shortNumber ++;
+        intNumber ++;
+        longNumber ++;
         System.out.println("значение после инкремента byte: " + byteNumber);
         System.out.println("значение после инкремента short: " + shortNumber);
         System.out.println("значение после инкремента int: " + intNumber);
         System.out.println("значение после инкремента long: " + longNumber + "\n");
-        byteNumber -= 1;
-        shortNumber -= 1;
-        intNumber -= 1;
-        longNumber -= 1;
+        byteNumber --;
+        shortNumber --;
+        intNumber --;
+        longNumber --;
         System.out.println("значение после декремента byte: " + byteNumber);
         System.out.println("значение после декремента short: " + shortNumber);
         System.out.println("значение после декремента int: " + intNumber);
@@ -71,8 +71,7 @@ public class VariablesTheme {
         System.out.println("Перестановка с помощью арифметических операций:" + "\n");
         System.out.println("Исходные значения: а = " + a + " , b = " + b);
         a += b;
-        b -= a;
-        b = -b;
+        b = a - b;
         a -= b;
         System.out.println("Новые значения: а = " + a + " , b = " + b + "\n");
         System.out.println("Перестановка с помощью побитовой операции ^:" + "\n");
@@ -89,24 +88,26 @@ public class VariablesTheme {
         System.out.println("Новые значения: а = " + a + " , b = " + b + "\n");
 
         System.out.println("6. Вывод символов и их кодов" + "\n");
-        int firstChar = 35;
-        int secondChar = 38;
-        int thirdChar = 64;
-        int fouthChar = 94;
-        int fifthChar = 95;
-        System.out.println(firstChar + " - " + (char) firstChar);
-        System.out.println(secondChar + " - " + (char) secondChar);
-        System.out.println(thirdChar + " - " + (char) thirdChar);
-        System.out.println(fouthChar + " - " + (char) fouthChar);
-        System.out.println(fifthChar + " - " + (char) fifthChar + "\n");
+        int code1 = 35;
+        int code2 = 38;
+        int code3 = 64;
+        int code4 = 94;
+        int code5 = 95;
+        System.out.println(code1 + " - " + (char) code1);
+        System.out.println(code2 + " - " + (char) code2);
+        System.out.println(code3 + " - " + (char) code3);
+        System.out.println(code4 + " - " + (char) code4);
+        System.out.println(code5 + " - " + (char) code5 + "\n");
 
         System.out.println("7. Произведение и сумма цифр числа" + "\n");
-        int number = 345;
-        int firstDigit = number / 100;
-        int secondDigit = (number / 10) % 10;
-        int thirdDigit = number % 10;
-        System.out.println("Сумма цифр числа " + number + " = " + (firstDigit + secondDigit + thirdDigit));
-        System.out.println("Произведение цифр числа " + number + " = " + (firstDigit * secondDigit * thirdDigit) + "\n");
+        int srcNum = 345;
+        int firstDigit = srcNum / 100;
+        int secondDigit = (srcNum / 10) % 10;
+        int thirdDigit = srcNum % 10;
+        System.out.println("Сумма цифр числа " + srcNum + " = " + (firstDigit + secondDigit + 
+            thirdDigit));
+        System.out.println("Произведение цифр числа " + srcNum + " = " + (firstDigit * 
+            secondDigit * thirdDigit) + "\n");
 
         System.out.println("8. Вывод на консоль ASCII-арт Дюка" +"\n");
         char rb = '\u0029';
@@ -121,11 +122,11 @@ public class VariablesTheme {
         System.out.println(" " + rs + ul + ul + ul + ul + rs + ls + ul + ul + ls + " " + "\n");
 
         System.out.println("9. Отображение количества сотен, десятков и единиц числа" + "\n");
-        number = 123;
-        System.out.println("Число " + number + " содержит: ");
-        System.out.println("1. " + number / 100 + " сотню");
-        System.out.println("2. " + (number / 10) % 10 + " десятка");
-        System.out.println("3. " + number % 10 + " единицы" + "\n");
+        srcNum = 123;
+        System.out.println("Число " + srcNum + " содержит: ");
+        System.out.println("1. " + srcNum / 100 + " сотню");
+        System.out.println("2. " + (srcNum / 10) % 10 + " десятка");
+        System.out.println("3. " + srcNum % 10 + " единицы" + "\n");
 
         System.out.println("10. Преобразование секунд" + "\n");
         int totalSecs = 86399;

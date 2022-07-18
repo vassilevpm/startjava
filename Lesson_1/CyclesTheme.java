@@ -103,28 +103,20 @@ public class CyclesTheme {
         }
         System.out.println();
 
-        i = 1;
-        j = 1;
+        i=5;
         do {
-            if(i <= 3) {
-                j = 1;
-                do {
-                    System.out.print("$");
-                    j++;
-                } while(j <= i);
-                System.out.println();
-                i++;
-            }
-            if(i > 3) {
-                j = 5 - i;
-                do {
-                    System.out.print("$");
-                    j--;
-                } while(j >= 0);
-                System.out.println();
-                i++;
-            }
-        } while(i < 6);        
+            if(i<3) {
+                j=i;
+            }else {
+                j=6-i;
+            }    
+            do {
+                System.out.print("$");
+                j--;
+            } while(j>0);
+            System.out.println();
+            i--;
+        } while(i > 0);
 
         System.out.println("\n7. Отображение ASCII-символов\n");
         System.out.println("Dec" + " Char");

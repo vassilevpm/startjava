@@ -1,4 +1,4 @@
-public class Wolf{
+public class Wolf {
     String sex;
     String name;
     double weight;

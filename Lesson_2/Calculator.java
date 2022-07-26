@@ -1,4 +1,5 @@
 public class Calculator {
+    
     public void calculate(int x, int y, char operation) {
         int result = 1;
         if(operation == '/' && y == 0) {

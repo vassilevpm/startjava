@@ -8,7 +8,7 @@ public class CalculatorTest {
         do {
             System.out.println("Введите первое число:");
             int x = sc.nextInt();
-            String tmp = sc.nextLine();
+            sc.nextLine();
             System.out.println("Введите знак математической операции:");
             char operation = sc.nextLine().charAt(0);
             System.out.println("Введите второе число:");

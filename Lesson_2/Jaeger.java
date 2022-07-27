@@ -41,7 +41,7 @@ public class Jaeger {
         System.out.println(modelName + " is running");
     }
 
-    public void status() {
+    public void showStatus() {
         System.out.println(modelName + " was destroyed");
     }
 }

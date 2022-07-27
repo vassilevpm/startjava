@@ -16,6 +16,10 @@ public class Player {
     }
 
     public void setNumber(int number) {
-        this.number = number;
+        if(number <= 0 || number > 100) {
+            System.out.println("Введите корректное число!");
+        } else {
+            this.number = number;
+        }
     }
 }

@@ -12,31 +12,29 @@ public class GuessNumber {
         this.player2 = player2;
     }
 
-    public void startGame() {
+    public void start() {
         targetNumber = (int) (Math.random() * 100) + 1;
         System.out.println("\nИгра началась!!!");
         do {
             System.out.print("Число игрока " + player1.getName() + " : ");
             player1.setNumber(sc.nextInt());
-            if (checkTargetNumber(player1)) {
+            if (isGuessed(player1)) {
                 break;
             }
             System.out.print("Число игрока " + player2.getName() + " : ");
             player2.setNumber(sc.nextInt());
-            if (checkTargetNumber(player2)) {
+            if (isGuessed(player2)) {
                 break;
             }
         } while (true);
     }
 
-    private boolean checkTargetNumber(Player player) {
-        if(player.getNumber() <= 0 || player.getNumber() > 100) {
-            System.out.println("Введите корректное число!");
-            return false;
-        } else if(player.getNumber() == targetNumber) {
+    private boolean isGuessed(Player player) {
+        if(player.getNumber() == targetNumber) {
             System.out.println(player.getName() + " победил!");
             return true;
-        } else if(player.getNumber() > targetNumber) {
+        }
+        if(player.getNumber() > targetNumber) {
             System.out.println("Число " + player.getNumber() + " больше того, что загадал компьютер");
         } else {
             System.out.println("Число " + player.getNumber() + " меньше того, что загадал компьютер");

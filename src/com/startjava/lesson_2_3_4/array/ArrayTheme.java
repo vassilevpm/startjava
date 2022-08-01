@@ -51,9 +51,10 @@ public class ArrayTheme {
             if (doubleArr[i] > midpoint) {
                 doubleArr[i] = 0;
                 counter++;
-                if (i == 8) {
-                    System.out.println();
-                }
+
+            }
+            if (i == 8) {
+                System.out.println();
             }
             System.out.printf(doubleArr[i] == 0 ? "%.0f   " : "%.3f   ", doubleArr[i]);
         }
@@ -107,25 +108,25 @@ public class ArrayTheme {
         System.out.println("\n\n6. Сдвиг элементов массива");
         String[] arrWithEmptyStrings = {"", "AA", "", "", "BBB", "C", "", "DDDD"};
         len = arrWithEmptyStrings.length;
-        int countLine = 0;
+        int count = 0;
         for (String s : arrWithEmptyStrings) {
             if (!s.isBlank()) {
-                countLine++;
+                count++;
             }
         }
-        String[] arrWithoutEmptyStrings = new String[countLine];
+        String[] arrWithoutEmptyStrings = new String[count];
         int numberRowsCopy = arrWithoutEmptyStrings.length;
-        countLine = 0;
+        count = 0;
         for (int i = 0; i < arrWithoutEmptyStrings.length; i++) {
             for (int j = 0; j < len; j++) {
-                j = countLine;
+                j = count;
                 if (!arrWithEmptyStrings[j].isBlank()) {
                     System.arraycopy(arrWithEmptyStrings, j, arrWithoutEmptyStrings, i, numberRowsCopy);
                     numberRowsCopy -= 1;
-                    countLine++;
+                    count++;
                     break;
                 }
-                countLine++;
+                count++;
             }
         }
         System.out.println(Arrays.toString(arrWithEmptyStrings));

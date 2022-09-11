@@ -8,10 +8,17 @@ public class CalculatorTest {
         String answer;
         do {
             System.out.println("Введите математическое выражение:");
-            System.out.println("Результат вычисления: " + Calculator.calculate(sc.nextLine()));
+            try {
+                System.out.println("Результат вычисления: " + Calculator.calculate(sc.nextLine()));
+            } catch (NumberFormatException e) {
+                System.out.println("Введено число неверного формата! Числа должны быть целыми.");
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
             do {
                 System.out.println("Хотите продолжить вычисления? [yes/no]:");
-                answer = sc.next();
+                answer = sc.nextLine();
+                sc.nextLine();
             } while (!answer.equals("yes") && !answer.equals("no"));
         } while(answer.equals("yes"));
     }
